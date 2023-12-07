@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/css/styles.css"
-    />
-    <title>Project Tracker</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <script src="./assets/js/script.js"></script>
-  </body>
+    <div id="dialog-form" title="new-project">
+        <form>
+            <fieldset>
+                <label for="name">Project Name</label>
+                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all"> <br>
+                <label for="projectType">Project Type</label>
+                <select id="projectType" name="projectType">
+                    <option value="FrontEnd">Front End</option>
+                    <option value="BackEnd">Back End</option>
+                </select> <br>
+                <label for="type">Hourly Wage ($)<label>
+                <input type="text" name="type" id="type" class="text ui-widget-content ui-corner-all"> <br>
+                <label for="dDate">Project Due Date</label>
+                <input type="text" name="dDate" id="dDate">
+    
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+
+    <button id="add-project" class="ui-button ui-corner-all ui-widget">Add Project</button>
+</body>
+<script src="assets/index.js"></script>
 </html>
